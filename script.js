@@ -16,7 +16,7 @@
   };
 
   const settings = {
-    speed: 1, scale: 1, sensitivity: 0.65, mode: "follow",
+    speed: 1, scale: 1.18, sensitivity: 0.65, mode: "follow",
     skin: "emerald", glow: true, eyeGlow: true, paused: false
   };
 
@@ -41,7 +41,7 @@
     if (!oldW || !oldH || !body.length) {
       creature.x = width * 0.5;
       creature.y = height * 0.52;
-      pointer.x = pointer.targetX = width * 0.68;
+      pointer.x = pointer.targetX = width * 0.56;
       pointer.y = pointer.targetY = height * 0.5;
       seedBody();
     } else {
@@ -95,7 +95,7 @@
                y: cy + Math.sin(time * 0.39) * height * 0.25 };
     }
     if (!pointerActive && !hasInteracted) {
-      return { x: cx + width * 0.18, y: cy };
+      return { x: cx + width * 0.07, y: cy };
     }
     if (!pointerActive && settings.mode === "follow") {
       return { x: lerp(pointer.targetX, cx, 0.025), y: lerp(pointer.targetY, cy, 0.025) };
@@ -117,7 +117,7 @@
     creature.x += creature.vx * dt * 60;
     creature.y += creature.vy * dt * 60;
 
-    const spacing = 7.2 * settings.scale;
+    const spacing = 8.0 * settings.scale;
     for (let i = 0; i < body.length; i++) {
       const previous = i === 0 ? creature : body[i - 1];
       const p = body[i];
@@ -194,13 +194,13 @@
 
   function drawHead(palette) {
     const s = settings.scale, a = creature.angle;
-    const headX = creature.x + Math.cos(a) * 14 * s;
-    const headY = creature.y + Math.sin(a) * 14 * s;
+    const headX = creature.x + Math.cos(a) * 16 * s;
+    const headY = creature.y + Math.sin(a) * 16 * s;
     ctx.save(); ctx.translate(headX, headY); ctx.rotate(a);
     if (settings.glow) { ctx.shadowColor = palette.glow; ctx.shadowBlur = 16 * s; }
-    ctx.beginPath(); ctx.moveTo(18*s, 0); ctx.quadraticCurveTo(13*s, -13*s, -3*s, -10*s);
+    ctx.beginPath(); ctx.moveTo(21*s, 0); ctx.quadraticCurveTo(15*s, -15*s, -3*s, -11*s);
     ctx.quadraticCurveTo(-12*s, -8*s, -10*s, 0); ctx.quadraticCurveTo(-12*s, 8*s, -3*s, 10*s);
-    ctx.quadraticCurveTo(13*s, 13*s, 18*s, 0); ctx.closePath();
+    ctx.quadraticCurveTo(15*s, 15*s, 21*s, 0); ctx.closePath();
     const g = ctx.createLinearGradient(-8*s, -10*s, 12*s, 10*s); g.addColorStop(0,palette.light);g.addColorStop(1,palette.body);
     ctx.fillStyle=g;ctx.fill();ctx.shadowBlur=0;ctx.strokeStyle=palette.dark;ctx.lineWidth=1.5*s;ctx.stroke();
     // Jaw and nostrils.
@@ -307,7 +307,7 @@
     $("resetButton").addEventListener("click", () => {
       creature.x = width * .5; creature.y = height * .52; creature.angle = 0; creature.vx = creature.vy = 0;
       seedBody(); hasInteracted = false; pointerActive = false; $("stageHint").classList.remove("hidden");
-      pointer.targetX = width * .68; pointer.targetY = height * .5;
+      pointer.targetX = width * .56; pointer.targetY = height * .5;
     });
   }
 

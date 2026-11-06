@@ -1,6 +1,6 @@
-# Reptile Interactive Cursor 2.0
+# Reptile Interactive Cursor 2.1
 
-A responsive, interactive reptile animation experiment built with vanilla HTML, CSS, Canvas 2D, and JavaScript.
+A responsive, interactive reptile animation experiment with a refined mobile-first habitat layout built with vanilla HTML, CSS, Canvas 2D, and JavaScript.
 
 **Tagline:** A Living Creature. A Responsive World.
 

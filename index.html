@@ -3,71 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#07110e">
-  <meta name="description" content="A living digital reptile that follows your pointer. Explore a responsive, customizable creature experiment.">
-  <meta property="og:title" content="Reptile Interactive Cursor 2.0">
+  <meta name="theme-color" content="#e9e8dc">
+  <meta name="description" content="A living digital reptile. An interactive creature experiment by Sandip Mukherjee.">
+  <meta property="og:title" content="Reptile — A Living Digital Specimen">
   <meta property="og:description" content="A living creature. A responsive world.">
   <meta property="og:type" content="website">
-  <title>Reptile Interactive Cursor 2.0</title>
+  <title>Reptile — A Living Digital Specimen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js" defer></script>
 </head>
 <body>
-  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="page-grain" aria-hidden="true"></div>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#" aria-label="Reptile Interactive Cursor home">
-        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M5 22c5-9 10-11 16-7 4 3 7 2 10-3M8 25c5-5 9-6 13-3 4 3 7 2 10-1M7 15l-3-4m7 2-1-5m15 7 5 1" /></svg></span>
-        <span><strong>REPTILE<span class="brand-dot">.</span></strong><small>INTERACTIVE CURSOR</small></span>
+      <a class="brand" href="#" aria-label="Reptile home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M5 25c7-10 13-12 19-7 4 3 7 2 11-4M8 29c6-6 11-7 16-3 4 3 7 2 11-2M8 17l-3-5m9 3-1-6m17 9 5 1"/></svg>
+        </span>
+        <span class="brand-copy"><strong>REPTILE<span>®</span></strong><small>AN INTERACTIVE SPECIMEN</small></span>
       </a>
-      <div class="top-meta"><span class="live-dot"></span><span>CREATURE SYSTEM ONLINE</span><span class="version">V 2.0</span></div>
-      <a class="github-link" href="https://github.com/sandip2007mukherjee-lgtm/Reptile-Interactive-Cursor" target="_blank" rel="noreferrer"><span>GitHub</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M6 5h9v9"/></svg></a>
+      <div class="top-meta"><span class="live-dot"></span><span>FIELD STUDY 001</span><span class="version">V 2.2</span></div>
+      <a class="github-link" href="https://github.com/sandip2007mukherjee-lgtm/Reptile-Interactive-Cursor" target="_blank" rel="noreferrer">SOURCE CODE <span aria-hidden="true">↗</span></a>
     </header>
 
     <main>
       <section class="intro">
-        <div class="eyebrow"><span>01</span> DIGITAL LIFEFORM / EXPERIMENT</div>
-        <h1>A living creature.<br><em>A responsive world.</em></h1>
-        <p class="intro-copy">Move your pointer or touch the habitat. Watch the creature turn, crawl, and react in real time.</p>
+        <div class="intro-side">
+          <div class="eyebrow"><span>01</span> DIGITAL NATURAL HISTORY</div>
+          <p class="intro-index">A STUDY IN<br>INTERACTION<br>&amp; MOVEMENT.</p>
+        </div>
+        <div class="intro-main">
+          <h1>A living creature.<br><em>A world of its own.</em></h1>
+          <div class="intro-bottom">
+            <p class="intro-copy">Not quite wild. Not quite code. Meet a small digital lifeform that responds to the world around it.</p>
+            <span class="scroll-cue"><span>SCROLL TO EXPLORE</span><i>↓</i></span>
+          </div>
+        </div>
+        <div class="hero-stamp" aria-hidden="true"><span>SPECIMEN</span><b>01</b><small>EST. 2026</small></div>
       </section>
 
       <section class="workspace" aria-label="Interactive reptile workspace">
-        <div class="stage-panel">
-          <div class="stage-topline"><span><i class="status-pip"></i> LIVE HABITAT</span><span id="modeLabel">FOLLOW MODE</span></div>
-          <div class="stage-wrap" id="stageWrap">
-            <canvas id="creatureCanvas" aria-label="Interactive animated reptile. Move your pointer or finger inside this area to guide it." role="img"></canvas>
-            <div class="stage-hint" id="stageHint"><span class="hint-cross">＋</span><span>MOVE TO INTERACT</span></div>
-            <div class="stage-coordinates" aria-hidden="true"><span>FIELD 01</span><span id="fpsReadout">-- FPS</span></div>
-            <div class="stage-corner corner-tl"></div><div class="stage-corner corner-br"></div>
+        <div class="stage-column">
+          <div class="section-kicker"><span>02 / THE HABITAT</span><span>LIVE CANVAS · 2D ENGINE</span></div>
+          <div class="stage-panel">
+            <div class="stage-topline"><span><i class="status-pip"></i> OBSERVATION WINDOW</span><span id="modeLabel">FOLLOW MODE</span></div>
+            <div class="stage-wrap" id="stageWrap">
+              <div class="habitat-label habitat-label-top" aria-hidden="true"><span>FIELD / A</span><span>LAT. 00° 00' 00"</span></div>
+              <canvas id="creatureCanvas" aria-label="Interactive animated reptile. Move your pointer or finger inside this area to guide it." role="img"></canvas>
+              <div class="stage-hint" id="stageHint"><span class="hint-cross">＋</span><span>MOVE TO INTERACT</span></div>
+              <div class="stage-coordinates" aria-hidden="true"><span>FIG. 01 — MOVEMENT STUDY</span><span id="fpsReadout">-- FPS</span></div>
+              <div class="stage-corner corner-tl"></div><div class="stage-corner corner-br"></div>
+            </div>
+            <div class="stage-footer">
+              <span><span class="keycap">MOUSE</span> OR <span class="keycap">TOUCH</span> TO GUIDE</span>
+              <span class="stage-note">A CREATURE IN YOUR HANDS</span>
+            </div>
           </div>
-          <div class="stage-footer">
-            <span><span class="keycap">MOUSE</span> OR <span class="keycap">TOUCH</span> TO GUIDE</span>
-            <span class="stage-note">PROCEDURAL ANIMATION ENGINE</span>
-          </div>
+          <div class="stage-caption"><span>FIG. 01</span><p>The habitat is a responsive field. Move through it and the specimen follows your lead.</p></div>
         </div>
 
         <aside class="control-panel" aria-label="Creature controls">
-          <div class="panel-heading"><div><div class="eyebrow"><span>02</span> CONTROL CENTER</div><h2>Creature settings</h2></div><span class="panel-icon">⌘</span></div>
+          <div class="panel-heading">
+            <div><div class="eyebrow"><span>03</span> FIELD EQUIPMENT</div><h2>Shape its world.</h2></div>
+            <span class="panel-icon" aria-hidden="true">✳</span>
+          </div>
+          <div class="control-intro">Adjust the conditions. Observe the response.</div>
+
           <div class="control-section">
-            <div class="section-title"><span>BEHAVIOUR</span><span class="section-line"></span></div>
+            <div class="section-title"><span>01 — BEHAVIOUR</span><span class="section-line"></span></div>
             <div class="mode-grid" role="group" aria-label="Movement mode">
-              <button class="mode-btn active" data-mode="follow" aria-pressed="true"><span class="mode-symbol">◎</span>Follow</button>
+              <button class="mode-btn active" data-mode="follow" aria-pressed="true"><span class="mode-symbol">↗</span>Follow</button>
               <button class="mode-btn" data-mode="idle" aria-pressed="false"><span class="mode-symbol">◌</span>Idle</button>
               <button class="mode-btn" data-mode="explore" aria-pressed="false"><span class="mode-symbol">⌁</span>Explore</button>
               <button class="mode-btn" data-mode="precision" aria-pressed="false"><span class="mode-symbol">⊙</span>Precision</button>
             </div>
           </div>
+
           <div class="control-section">
-            <div class="section-title"><span>MOTION</span><span class="section-line"></span></div>
+            <div class="section-title"><span>02 — MOVEMENT</span><span class="section-line"></span></div>
             <label class="slider-row"><span>Animation speed <output id="speedValue">1.0×</output></span><input id="speedControl" type="range" min="0.3" max="2" step="0.1" value="1"></label>
             <label class="slider-row"><span>Creature scale <output id="scaleValue">100%</output></span><input id="scaleControl" type="range" min="65" max="135" step="5" value="100"></label>
             <label class="slider-row"><span>Follow sensitivity <output id="sensitivityValue">65%</output></span><input id="sensitivityControl" type="range" min="20" max="100" step="5" value="65"></label>
           </div>
+
           <div class="control-section">
-            <div class="section-title"><span>SKIN PRESETS</span><span class="section-line"></span></div>
+            <div class="section-title"><span>03 — SKIN VARIATIONS</span><span class="section-line"></span></div>
             <div class="skin-grid" role="group" aria-label="Creature skin presets">
               <button class="skin-btn selected" data-skin="emerald" aria-label="Emerald Predator" aria-pressed="true"><span style="--swatch:#70d69b"></span><small>Emerald</small></button>
               <button class="skin-btn" data-skin="toxic" aria-label="Toxic Neon" aria-pressed="false"><span style="--swatch:#c2e65a"></span><small>Toxic</small></button>
@@ -76,25 +99,32 @@
               <button class="skin-btn" data-skin="shadow" aria-label="Shadow Reptile" aria-pressed="false"><span style="--swatch:#a6a9b5"></span><small>Shadow</small></button>
             </div>
           </div>
+
           <div class="control-section toggle-section">
-            <div class="section-title"><span>VISUAL EFFECTS</span><span class="section-line"></span></div>
+            <div class="section-title"><span>04 — LIGHT CONDITIONS</span><span class="section-line"></span></div>
             <label class="toggle-row"><span><b>Neon aura</b><small>Subtle creature glow</small></span><input id="glowToggle" type="checkbox" checked><i></i></label>
             <label class="toggle-row"><span><b>Eye illumination</b><small>Highlight the eyes</small></span><input id="eyeToggle" type="checkbox" checked><i></i></label>
           </div>
+
           <div class="panel-actions">
             <button class="primary-action" id="pauseButton"><span id="pauseIcon">Ⅱ</span><span id="pauseText">Pause creature</span></button>
             <button class="reset-action" id="resetButton" aria-label="Reset creature position" title="Reset creature">↺</button>
           </div>
-          <div class="panel-foot"><span class="live-dot"></span> ALL SYSTEMS NOMINAL <span id="stateLabel">RUNNING</span></div>
+          <div class="panel-foot"><span class="live-dot"></span> SPECIMEN STATUS <span id="stateLabel">RUNNING</span></div>
         </aside>
       </section>
-      <section class="bottom-info">
-        <div><span class="info-number">01 / INPUT</span><p>Guide the creature with your mouse or finger. The habitat responds to pointer movement.</p></div>
-        <div><span class="info-number">02 / BEHAVIOUR</span><p>Switch between follow, idle, explore, and precision movement modes.</p></div>
-        <div><span class="info-number">03 / CUSTOMIZE</span><p>Adjust its scale, speed, sensitivity, and skin to create your own variant.</p></div>
+
+      <section class="notes-section">
+        <div class="notes-heading"><div class="eyebrow"><span>04</span> OBSERVATION NOTES</div><h2>Curiosity is<br><em>the control.</em></h2></div>
+        <div class="notes-list">
+          <article class="note-row"><span class="note-index">A / INPUT</span><div><h3>Give it a direction.</h3><p>Move your mouse or finger inside the habitat. The creature reads your movement and responds in real time.</p></div><span class="note-mark">↗</span></article>
+          <article class="note-row"><span class="note-index">B / BEHAVIOUR</span><div><h3>Let it find its rhythm.</h3><p>Switch between follow, idle, explore, and precision modes to change how the specimen moves.</p></div><span class="note-mark">⌁</span></article>
+          <article class="note-row"><span class="note-index">C / CUSTOMIZE</span><div><h3>Change the conditions.</h3><p>Experiment with scale, speed, sensitivity, skin variations, and light to create a different character.</p></div><span class="note-mark">✳</span></article>
+        </div>
       </section>
     </main>
-    <footer><span>REPTILE INTERACTIVE CURSOR <b>2.0</b></span><span>BUILT FOR CURIOUS MINDS · <a href="https://github.com/sandip2007mukherjee-lgtm/Reptile-Interactive-Cursor" target="_blank" rel="noreferrer">VIEW SOURCE ↗</a></span></footer>
+
+    <footer><span>REPTILE® <b>— A LIVING DIGITAL SPECIMEN</b></span><span>DESIGNED FOR CURIOUS MINDS · <a href="https://github.com/sandip2007mukherjee-lgtm/Reptile-Interactive-Cursor" target="_blank" rel="noreferrer">EXPLORE THE SOURCE ↗</a></span></footer>
   </div>
 </body>
 </html>

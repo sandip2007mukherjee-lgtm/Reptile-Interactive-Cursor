@@ -1,67 +1,31 @@
-# Reptile Interactive Cursor 2.1
+# Reptile — Field Notes Redesign (2.2)
 
-A responsive, interactive reptile animation experiment with a refined mobile-first habitat layout built with vanilla HTML, CSS, Canvas 2D, and JavaScript.
+A visual redesign of Reptile Interactive Cursor with an editorial natural-history identity.
 
-**Tagline:** A Living Creature. A Responsive World.
+## Files in this package
 
-## Features
+- `index.html` — redesigned page structure and content
+- `style.css` — complete responsive design system
+- `README.md` — installation notes
 
-- Pointer and touch interaction inside the habitat
-- Follow, Idle, Explore, and Precision modes
-- Five creature skin presets
-- Adjustable animation speed, creature scale, and follow sensitivity
-- Toggleable neon aura and eye illumination
-- Responsive desktop, tablet, and mobile layout
-- Canvas resizing with device-pixel-ratio handling
-- `requestAnimationFrame` animation loop
-- Page visibility and reduced-motion awareness
-- No build step or framework required
+## Install
 
-## Run locally
+1. Keep your existing `script.js` in the repository root.
+2. Replace the existing `index.html` and `style.css` with the files in this package.
+3. Commit and push to the branch used by GitHub Pages.
 
-Download or clone the repository, then open `index.html` in a modern browser. For a local web server, you can use VS Code Live Server or run:
+The existing `script.js` is intentionally unchanged. All original interaction hooks and IDs are preserved, including canvas rendering, pointer/touch input, behaviour modes, skin presets, sliders, visual toggles, pause, reset, resize handling, and reduced-motion awareness.
 
-```bash
-python -m http.server 8000
-```
+## Design direction
 
-Then visit `http://localhost:8000`.
+- Warm mineral-paper editorial canvas
+- Deep forest habitat with restrained specimen markings
+- Instrument Serif display typography paired with DM Sans and DM Mono
+- Asymmetric hero and observation-note layout
+- Compact, tactile controls instead of generic glass cards
+- Responsive mobile and landscape layouts
+- Visible keyboard focus and reduced-motion CSS support
 
-## GitHub Pages deployment
+## Verification
 
-1. Push the project files to the repository's `main` branch.
-2. Open **Settings → Pages** in GitHub.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select `main` and `/ (root)`, then save.
-5. Wait for GitHub Pages to publish the site.
-
-## Controls
-
-- Move a mouse or finger within the habitat to guide the creature.
-- Choose a behaviour mode in the Control Center.
-- Adjust speed, scale, and sensitivity with the sliders.
-- Choose a skin preset and toggle visual effects.
-- Use Pause and Reset to control the animation.
-
-## Project files
-
-```text
-index.html
-style.css
-script.js
-README.md
-```
-
-## Notes
-
-The animation is rendered locally in the browser. No user pointer data is sent to a server. The Google Fonts stylesheet is an optional external font enhancement; system fallbacks remain available if it cannot load.
-
-## Testing checklist
-
-Test on current desktop and mobile browsers:
-- Mouse movement and touch input
-- Portrait and landscape orientation
-- Canvas resizing
-- All settings and buttons
-- Browser tab visibility changes
-- Reduced-motion preference
+Test the five skin presets, all four modes, all three sliders, both visual toggles, Pause, Reset, mouse input, touch input, portrait/landscape orientation, keyboard focus, and reduced-motion settings.
